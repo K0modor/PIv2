@@ -1,38 +1,3 @@
 # PIv2
 
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Graphique de données temporelles</title>
-	<!-- Inclusion de Chart.js -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.1.2/chart.min.js" integrity="sha512-fYE9wAJg2PYbpJPxyGcuzDSiMuWJiw58rKa9MWQICkAqEO+xeJ5hg5qPihF8kqa7tbgJxsmgY0Yp51+IMrSEVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  </head>
-  <body>
-    <canvas id="myChart"></canvas>
-    <script>
-      var ctx = document.getElementById('myChart').getContext('2d');
-      var data = {
-        labels: ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet"],
-        datasets: [{
-            label: 'Données temporelles',
-            data: [12, 19, 3, 5, 2, 3, 20],
-            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-            borderColor: 'rgba(255, 99, 132, 1)',
-            borderWidth: 1
-        }]
-      };
-      var chart = new Chart(ctx, {
-        type: 'line',
-        data: data,
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true
-            }
-          }
-        }
-      });
-    </script>
-  </body>
-</html>
